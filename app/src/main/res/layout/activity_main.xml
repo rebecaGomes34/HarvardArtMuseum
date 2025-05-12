@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/img_3">
+
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/gridLayout"
+    android:rowCount="2"
+    android:columnCount="3"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="70dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/AboutCard"
+        android:layout_width="115dp"
+        android:layout_height="90dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_margin="8dp"
+
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#37484F">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_museum_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOBRE"
+                android:textAllCaps="true"
+                android:textColor="#E3D5CA"
+                android:textAlignment="center"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tuorCard"
+        android:layout_width="115dp"
+        android:layout_height="90dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_margin="8dp"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#830121">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_explore_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOUR"
+                android:textAllCaps="true"
+                android:textColor="#E3D5CA"
+                android:textAlignment="center"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favoriteCard"
+        android:layout_width="115dp"
+        android:layout_height="90dp"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_margin="8dp"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#37484F">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_favorite_border_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="curtidos"
+                android:textAllCaps="true"
+                android:textColor="#E3D5CA"
+                android:textAlignment="center"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</GridLayout>
+</RelativeLayout>
