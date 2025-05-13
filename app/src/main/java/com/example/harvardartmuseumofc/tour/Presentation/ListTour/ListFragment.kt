@@ -33,7 +33,7 @@ class ListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = inflater.inflate(R.layout.activity_tour, container, false)
+    ): View = inflater.inflate(R.layout.gallery_tour_fragment, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,11 +42,9 @@ class ListFragment : Fragment() {
 
         recyclerView.adapter = ArtListAdapter(emptyList()){}
         viewModel.hamInfoLiveData.observe(viewLifecycleOwner) {
-
             recyclerView.adapter = ArtListAdapter(it) { tourName ->
                 Toast.makeText(context, "Clicou em: $tourName", Toast.LENGTH_SHORT).show()
             }
-            recyclerView.adapter?.notifyDataSetChanged()
         }
 
         viewModel.getHamInfo("2500")

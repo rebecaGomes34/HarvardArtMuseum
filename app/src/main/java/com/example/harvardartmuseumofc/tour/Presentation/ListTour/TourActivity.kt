@@ -11,7 +11,7 @@ class TourActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.artRecyclerView, ListFragment())
+                .replace(R.id.fragmentContainerTour, ListFragment())
                 .commit()
         }
     }
